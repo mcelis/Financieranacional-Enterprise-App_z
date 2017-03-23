@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="base-framework" />
+        <module name="canonical-api-contract" />
+        <module name="personas-ms" />
+        <module name="service-framework" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="base-framework" target="1.7" />
+      <module name="canonical-api-contract" target="1.7" />
+      <module name="common-artifacts" target="1.5" />
+      <module name="enterprise-services" target="1.5" />
+      <module name="Financieranacional-Enterprise-App" target="1.5" />
+      <module name="personas-ms" target="1.7" />
+      <module name="service-framework" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

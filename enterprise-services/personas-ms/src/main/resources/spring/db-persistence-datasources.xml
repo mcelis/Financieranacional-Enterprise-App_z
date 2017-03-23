@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      Cibercolegios Configuration Artifact
+
+      Created: 03-Ene-2017
+      Author:  Administrator
+      Type: spring configuration file
+      Purpose: define jdbc datasources
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        LOCAL ENV -
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <beans profile="dev">
+
+        <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+            <property name="driverClassName" value="com.sybase.jdbc4.jdbc.SybDriver"/>
+            <property name="url" value="jdbc:sybase:Tds:192.168.30.26:7030?ServiceName=financiera"/>
+            <property name="username" value="bpm"/>
+            <property name="password" value="bpm123"/>
+            <property name="initialSize" value="0"/>
+            <property name="maxTotal" value="8"/>
+            <property name="maxIdle" value="8"/>
+            <property name="minIdle" value="0"/>
+        </bean>
+
+        <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+            <property name="showSql" value="true"/>
+            <property name="database" value="SYBASE"/>
+        </bean>
+
+    </beans>
+
+
+    <beans profile="dev-sql">
+
+        <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+            <property name="driverClassName" value="com.sybase.jdbc4.jdbc.SybDriver"/>
+            <property name="url" value="jdbc:sybase:Tds:hostXXX:5000?ServiceName=financiera"/>
+            <property name="username" value="sa"/>
+            <property name="password" value="qwerty"/>
+            <property name="initialSize" value="0"/>
+            <property name="maxTotal" value="8"/>
+            <property name="maxIdle" value="8"/>
+            <property name="minIdle" value="0"/>
+        </bean>
+
+        <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+            <property name="showSql" value="true"/>
+            <property name="database" value="SYBASE"/>
+        </bean>
+
+    </beans>
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        TEST ENV -
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <beans profile="test">
+        <jee:jndi-lookup id="dataSource" jndi-name="jdbc/FinancieraNacionalDS" expected-type="javax.sql.DataSource"/>
+    </beans>
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        QC ENV -
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <beans profile="qc">
+        <jee:jndi-lookup id="dataSource" jndi-name="jdbc/FinancieraNacionalDS" expected-type="javax.sql.DataSource"/>
+    </beans>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        UAT ENV -
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <beans profile="uat">
+        <jee:jndi-lookup id="dataSource" jndi-name="jdbc/FinancieraNacionalDS" expected-type="javax.sql.DataSource"/>
+    </beans>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        PROD ENV -
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <beans profile="prod">
+        <jee:jndi-lookup id="dataSource" jndi-name="jdbc/FinancieraNacionalDS" expected-type="javax.sql.DataSource"/>
+    </beans>
+
+</beans>

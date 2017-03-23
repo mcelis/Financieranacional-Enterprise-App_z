@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/common-artifacts/base-framework" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-artifacts/canonical-api-contract" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-artifacts/service-framework" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/enterprise-services/personas-ms" charset="UTF-8" />
+  </component>
+</project>

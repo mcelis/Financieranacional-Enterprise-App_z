@@ -1,0 +1,5 @@
+*.iml
+/common-artifacts/base-framework/target
+/common-artifacts/canonical-api-contract/target
+/common-artifacts/service-framework/target
+/enterprise-services/personas-ms/target

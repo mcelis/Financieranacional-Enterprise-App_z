@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Financieranacional-Enterprise-App.iml" filepath="$PROJECT_DIR$/Financieranacional-Enterprise-App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-artifacts/base-framework/base-framework.iml" filepath="$PROJECT_DIR$/common-artifacts/base-framework/base-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-artifacts/canonical-api-contract/canonical-api-contract.iml" filepath="$PROJECT_DIR$/common-artifacts/canonical-api-contract/canonical-api-contract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-artifacts/common-artifacts.iml" filepath="$PROJECT_DIR$/common-artifacts/common-artifacts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enterprise-services/enterprise-services.iml" filepath="$PROJECT_DIR$/enterprise-services/enterprise-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enterprise-services/personas-ms/personas-ms.iml" filepath="$PROJECT_DIR$/enterprise-services/personas-ms/personas-ms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-artifacts/service-framework/service-framework.iml" filepath="$PROJECT_DIR$/common-artifacts/service-framework/service-framework.iml" />
+    </modules>
+  </component>
+</project>
