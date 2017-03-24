@@ -42,12 +42,12 @@
     <jaxrs:server address="/rest">
         <jaxrs:serviceBeans>
             <bean class="co.com.cfn.personas.integration.service.rest.ActividadesPersonasResouce"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoIdentificacionResource"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider"/>
         </jaxrs:providers>
     </jaxrs:server>
-
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         SOAP INFRAESTRUCTURE

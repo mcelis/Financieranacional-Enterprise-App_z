@@ -34,7 +34,7 @@ public class TipoIdentificacionManager {
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public List<TipoIdentificacion> listarActividadesPersona() throws SystemException, BusinessException {
         try {
-            return em.createNamedQuery("CtgTipoIdentificacion.findAll", TipoIdentificacion.class).getResultList();
+            return em.createNamedQuery("TipoIdentificacion.findAll", TipoIdentificacion.class).getResultList();
         } catch (PersistenceException  ex) {
             LOGGER.error("Business Boundary - a system error has occurred", ex);
             throw ExceptionBuilder.newBuilder()

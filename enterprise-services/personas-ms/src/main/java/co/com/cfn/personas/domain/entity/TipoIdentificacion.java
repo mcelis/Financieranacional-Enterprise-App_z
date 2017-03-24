@@ -9,44 +9,42 @@ import java.util.*;
  */
 
 @Entity
-@Table(name = "CTG_TIPO_IDENTIFICACION")
+@Table(name = "CTG_TIPO_IDENTIFICACION", schema = "dbo", catalog = "BPM_MDB")
 @NamedQueries({
-        @NamedQuery(name = "CtgTipoIdentificacion.findAll", query = "SELECT c FROM CtgTipoIdentificacion c")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidId", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidId = :tidId")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidCodigo", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidCodigo = :tidCodigo")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidNombre", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidNombre = :tidNombre")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidDescripcion", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidDescripcion = :tidDescripcion")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidCodcobis", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidCodcobis = :tidCodcobis")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidCodpcie", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidCodpcie = :tidCodpcie")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidFechaHoraCrea", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidFechaHoraCrea = :tidFechaHoraCrea")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidFechaHoraModifica", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidFechaHoraModifica = :tidFechaHoraModifica")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidUsuarioCrea", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidUsuarioCrea = :tidUsuarioCrea")
-        , @NamedQuery(name = "CtgTipoIdentificacion.findByTidUsuarioModifica", query = "SELECT c FROM CtgTipoIdentificacion c WHERE c.tidUsuarioModifica = :tidUsuarioModifica")})
+        @NamedQuery(name = "TipoIdentificacion.findAll", query = "SELECT c FROM TipoIdentificacion c")})
+
 public class TipoIdentificacion {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
     @Column(name = "TID_ID")
     private Integer tidId;
+
+    @Basic
     @Column(name = "TID_CODIGO")
     private String tidCodigo;
+    @Basic
     @Column(name = "TID_NOMBRE")
     private String tidNombre;
+    @Basic
     @Column(name = "TID_DESCRIPCION")
     private String tidDescripcion;
+    @Basic
     @Column(name = "TID_CODCOBIS")
     private String tidCodcobis;
+    @Basic
     @Column(name = "TID_CODPCIE")
     private String tidCodpcie;
+    @Basic
     @Column(name = "TID_FECHA_HORA_CREA")
-    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp tidFechaHoraCrea;
+    @Basic
     @Column(name = "TID_FECHA_HORA_MODIFICA")
-    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp tidFechaHoraModifica;
+    @Basic
     @Column(name = "TID_USUARIO_CREA")
     private String tidUsuarioCrea;
+    @Basic
     @Column(name = "TID_USUARIO_MODIFICA")
     private String tidUsuarioModifica;
 
