@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "CTG_ACTIVIDAD_PERSONA", schema = "dbo", catalog = "financiera")
+@Table(name = "CTG_ACTIVIDAD_PERSONA", schema = "dbo", catalog = "BPM_MDB")
 @NamedQueries({
         @NamedQuery(name = "ActividadPersona.findAll", query = "SELECT c FROM ActividadPersona c")})
 

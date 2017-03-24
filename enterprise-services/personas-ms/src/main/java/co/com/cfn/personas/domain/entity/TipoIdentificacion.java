@@ -9,7 +9,7 @@ import java.util.*;
  */
 
 @Entity
-@Table(name = "CTG_TIPO_IDENTIFICACION", schema = "dbo", catalog = "financiera")
+@Table(name = "CTG_TIPO_IDENTIFICACION", schema = "dbo", catalog = "BPM_MDB")
 @NamedQueries({
         @NamedQuery(name = "TipoIdentificacion.findAll", query = "SELECT c FROM TipoIdentificacion c")})
 
