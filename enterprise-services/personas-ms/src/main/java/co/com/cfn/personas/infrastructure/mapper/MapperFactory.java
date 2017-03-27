@@ -23,6 +23,8 @@ public class MapperFactory {
 
     public static final String TIPODOCUMENTAL_DTO_TO_ENTITY = "TIPODOCUMENTAL_DTO_TO_ENTITY";
     public static final String TIPODOCUMENTAL_ENTITY_TO_DTO = "TIPODOCUMENTAL_ENTITY_TO_DTO";
+    public static final String TIPOTRAMITE_DTO_TO_ENTITY = "TIPOTRAMITE_DTO_TO_ENTITY";
+    public static final String TIPOTRAMITE_ENTITY_TO_DTO = "TIPOTRAMITE_ENTITY_TO_DTO";
 
 
     private static MapperFactory INSTANCE = new MapperFactory();
@@ -66,6 +68,14 @@ public class MapperFactory {
 
             case TIPOIDENTIFICACION_ENTITY_TO_DTO:
                 mapper = (Mapper<I, O>) new TipoIdentificacionEntityToDTOMapper();
+                break;
+
+            case TIPOTRAMITE_DTO_TO_ENTITY:
+                mapper = (Mapper<I, O>) new TipoTramiteDTOToEntityMapper();
+                break;
+
+            case TIPOTRAMITE_ENTITY_TO_DTO:
+                mapper = (Mapper<I, O>) new TipoTramiteEntityToDTOMapper();
                 break;
 
             default:

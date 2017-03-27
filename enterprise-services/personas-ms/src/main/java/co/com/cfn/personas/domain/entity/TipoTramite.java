@@ -45,7 +45,7 @@ public class TipoTramite {
     @Column(name = "TTR_SE_PUEDE_VOLVER_SOL_F")
     private int ttrSePuedeVolverSolF;
 
-    public TipoTramite() {
+    public TipoTramite(Integer id, String nombre, String usuarioCrea, String usuarioModifica, Timestamp fechaHoraCrea, Timestamp fechaHoraModifica, Integer sePuedeVolverSolF) {
     }
 
     public TipoTramite(Integer ttrId) {
