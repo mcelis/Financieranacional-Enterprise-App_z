@@ -45,6 +45,7 @@
             <bean class="co.com.cfn.personas.integration.service.rest.TipoIdentificacionResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.NacionalidadResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.NivelEstudioResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.ProfesionResource"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider"/>

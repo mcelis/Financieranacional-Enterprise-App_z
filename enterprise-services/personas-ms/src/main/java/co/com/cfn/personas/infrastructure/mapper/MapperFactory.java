@@ -28,6 +28,8 @@ public class MapperFactory {
 
     public static final String NIVELESTUDIO_ENTITY_TO_DTO = "NIVELESTUDIO_ENTITY_TO_DTO";
 
+    public static final String PROFESION_ENTITY_TO_DTO = "PROFESION_ENTITY_TO_DTO";
+
     private static MapperFactory INSTANCE = new MapperFactory();
 
     // [constructor]------------------------------
@@ -79,6 +81,9 @@ public class MapperFactory {
                 mapper = (Mapper<I, O>) new NivelEstudioEntityToDTOMapper();
                 break;
 
+            case PROFESION_ENTITY_TO_DTO:
+                mapper = (Mapper<I, O>) new ProfesionEntityToDTOMapper();
+                break;
 
             default:
                 break;
