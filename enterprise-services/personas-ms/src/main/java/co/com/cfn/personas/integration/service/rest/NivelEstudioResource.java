@@ -51,7 +51,7 @@ public class NivelEstudioResource {
 
         try {
 
-            LOGGER.info("processing soap request - listarNacionalidad ");
+            LOGGER.info("processing soap request - listarNivelEstuio ");
 
             List<NivelEstudioDTO> NivelEstudioList;
 
