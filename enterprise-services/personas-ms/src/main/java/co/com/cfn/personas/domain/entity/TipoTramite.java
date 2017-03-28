@@ -10,14 +10,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "CTG_TIPO_TRAMITE")
 @NamedQueries({
-        @NamedQuery(name = "CtgTipoTramite.findAll", query = "SELECT c FROM CtgTipoTramite c")
-        , @NamedQuery(name = "CtgTipoTramite.findByTtrId", query = "SELECT c FROM CtgTipoTramite c WHERE c.ttrId = :ttrId")
-        , @NamedQuery(name = "CtgTipoTramite.findByTtrNombre", query = "SELECT c FROM CtgTipoTramite c WHERE c.ttrNombre = :ttrNombre")
-        , @NamedQuery(name = "CtgTipoTramite.findByTtrUsuarioCrea", query = "SELECT c FROM CtgTipoTramite c WHERE c.ttrUsuarioCrea = :ttrUsuarioCrea")
-        , @NamedQuery(name = "CtgTipoTramite.findByTtrUsuarioModifica", query = "SELECT c FROM CtgTipoTramite c WHERE c.ttrUsuarioModifica = :ttrUsuarioModifica")
-        , @NamedQuery(name = "CtgTipoTramite.findByTtrFechaHoraCrea", query = "SELECT c FROM CtgTipoTramite c WHERE c.ttrFechaHoraCrea = :ttrFechaHoraCrea")
-        , @NamedQuery(name = "CtgTipoTramite.findByTtrFechaHoraModifica", query = "SELECT c FROM CtgTipoTramite c WHERE c.ttrFechaHoraModifica = :ttrFechaHoraModifica")
-        , @NamedQuery(name = "CtgTipoTramite.findByTtrSePuedeVolverSolF", query = "SELECT c FROM CtgTipoTramite c WHERE c.ttrSePuedeVolverSolF = :ttrSePuedeVolverSolF")})
+        @NamedQuery(name = "TipoTramite.findAll", query = "SELECT c FROM TipoTramite c")})
 
 public class TipoTramite {
     private static final long serialVersionUID = 1L;
@@ -36,10 +29,8 @@ public class TipoTramite {
     private String ttrUsuarioModifica;
     @Basic(optional = false)
     @Column(name = "TTR_FECHA_HORA_CREA")
-    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp ttrFechaHoraCrea;
     @Column(name = "TTR_FECHA_HORA_MODIFICA")
-    @Temporal(TemporalType.TIMESTAMP)
     private Timestamp ttrFechaHoraModifica;
     @Basic(optional = false)
     @Column(name = "TTR_SE_PUEDE_VOLVER_SOL_F")

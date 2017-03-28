@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "CTG_NIVEL_ESTUDIO")
+@Table(name = "CTG_NIVEL_ESTUDIO", schema = "dbo", catalog = "BPM_MDB")
 @NamedQueries({
         @NamedQuery(name = "NivelEstudio.findAll", query = "SELECT c FROM NivelEstudio c")})
 public class NivelEstudio {
