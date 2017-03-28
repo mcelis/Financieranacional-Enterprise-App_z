@@ -30,6 +30,9 @@ public class MapperFactory {
     public static final String ESTADOCIVIL_DTO_TO_ENTITY = "ESTADOCIVIL_DTO_TO_ENTITY";
     public static final String ESTADOCICIL_ENTITY_TO_DTO = "ESTADOCICIL_ENTITY_TO_DTO";
 
+    public static final String GENERO_DTO_TO_ENTITY ="GENERO_DTO_TO_ENTITY";
+    public static final String GENERO_ENTITY_TO_DTO = "GENERO_ENTITY_TO_DTO";
+
 
     private static MapperFactory INSTANCE = new MapperFactory();
 
@@ -88,6 +91,14 @@ public class MapperFactory {
 
             case ESTADOCICIL_ENTITY_TO_DTO:
                 mapper = (Mapper<I, O>) new EstadoCivilEntityToDTOMapper();
+                break;
+
+            case GENERO_DTO_TO_ENTITY:
+                mapper = (Mapper<I, O>) new GeneroDTOToEntityMapper();
+                break;
+
+            case GENERO_ENTITY_TO_DTO:
+                mapper = (Mapper<I, O>) new GeneroEntityToDTOMapper();
                 break;
 
             default:

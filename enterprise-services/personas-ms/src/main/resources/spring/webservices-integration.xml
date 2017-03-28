@@ -43,6 +43,9 @@
         <jaxrs:serviceBeans>
             <bean class="co.com.cfn.personas.integration.service.rest.ActividadesPersonasResouce"/>
             <bean class="co.com.cfn.personas.integration.service.rest.TipoIdentificacionResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoTramiteResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.EstadoCivilResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.GeneroResource"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider"/>
