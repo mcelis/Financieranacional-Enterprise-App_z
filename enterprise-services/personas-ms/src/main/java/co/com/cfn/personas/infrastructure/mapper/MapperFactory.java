@@ -26,6 +26,8 @@ public class MapperFactory {
 
     public static final String NACIONALIDAD_ENTITY_TO_DTO = "NACIONALIDAD_ENTITY_TO_DTO";
 
+    public static final String NIVELESTUDIO_ENTITY_TO_DTO = "NIVELESTUDIO_ENTITY_TO_DTO";
+
     private static MapperFactory INSTANCE = new MapperFactory();
 
     // [constructor]------------------------------
@@ -72,6 +74,11 @@ public class MapperFactory {
             case NACIONALIDAD_ENTITY_TO_DTO:
                 mapper = (Mapper<I, O>) new NacionalidadEntityToDTOMapper();
                 break;
+
+            case NIVELESTUDIO_ENTITY_TO_DTO:
+                mapper = (Mapper<I, O>) new NivelEstudioEntityToDTOMapper();
+                break;
+
 
             default:
                 break;
