@@ -57,7 +57,7 @@ public class TipoIdentificacionResource {
 
             List<TipoIdentificacionDTO> TipoIdentificacionList;
 
-            TipoIdentificacionList = entityToDtoMapper.map(boundary.listarActividadesPersona());
+            TipoIdentificacionList = entityToDtoMapper.map(boundary.listarTipoIdentificacion());
 
             return Response.ok(new GenericEntity<List<TipoIdentificacionDTO>>(TipoIdentificacionList) {}).build();
 

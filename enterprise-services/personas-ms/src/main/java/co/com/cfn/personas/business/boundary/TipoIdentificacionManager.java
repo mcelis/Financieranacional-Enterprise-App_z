@@ -32,7 +32,7 @@ public class TipoIdentificacionManager {
     }
 
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<TipoIdentificacion> listarActividadesPersona() throws SystemException, BusinessException {
+    public List<TipoIdentificacion> listarTipoIdentificacion() throws SystemException, BusinessException {
         try {
             return em.createNamedQuery("TipoIdentificacion.findAll", TipoIdentificacion.class).getResultList();
         } catch (PersistenceException  ex) {
