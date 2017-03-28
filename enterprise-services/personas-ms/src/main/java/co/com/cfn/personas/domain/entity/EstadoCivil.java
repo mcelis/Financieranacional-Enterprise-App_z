@@ -7,18 +7,9 @@ import java.sql.Timestamp;
  * Created by Mark on 26/3/2017.
  */
 @Entity
-@Table(name = "CTG_ESTADO_CIVIL")
+@Table(name = "CTG_ESTADO_CIVIL", schema = "dbo", catalog = "BPM_MDB")
 @NamedQueries({
-        @NamedQuery(name = "CtgEstadoCivil.findAll", query = "SELECT c FROM CtgEstadoCivil c")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvId", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvId = :ecvId")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvCodigo", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvCodigo = :ecvCodigo")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvNombre", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvNombre = :ecvNombre")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvCodcobis", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvCodcobis = :ecvCodcobis")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvCodpcie", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvCodpcie = :ecvCodpcie")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvFechaHoraCrea", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvFechaHoraCrea = :ecvFechaHoraCrea")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvFechaHoraModifica", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvFechaHoraModifica = :ecvFechaHoraModifica")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvUsuarioCrea", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvUsuarioCrea = :ecvUsuarioCrea")
-        , @NamedQuery(name = "CtgEstadoCivil.findByEcvUsuarioModifica", query = "SELECT c FROM CtgEstadoCivil c WHERE c.ecvUsuarioModifica = :ecvUsuarioModifica")})
+        @NamedQuery(name = "EstadoCivil.findAll", query = "SELECT c FROM EstadoCivil c")})
 
 public class EstadoCivil {
     private static final long serialVersionUID = 1L;
@@ -36,10 +27,10 @@ public class EstadoCivil {
     @Column(name = "ECV_CODPCIE")
     private String ecvCodpcie;
     @Column(name = "ECV_FECHA_HORA_CREA")
-    @Temporal(TemporalType.TIMESTAMP)
+
     private Timestamp ecvFechaHoraCrea;
     @Column(name = "ECV_FECHA_HORA_MODIFICA")
-    @Temporal(TemporalType.TIMESTAMP)
+
     private Timestamp ecvFechaHoraModifica;
     @Column(name = "ECV_USUARIO_CREA")
     private String ecvUsuarioCrea;
@@ -153,31 +144,14 @@ public class EstadoCivil {
 
     @Override
     public int hashCode() {
-        int result = ecvId;
-        result = 31 * result + (ecvCodigo != null ? ecvCodigo.hashCode() : 0);
-        result = 31 * result + (ecvNombre != null ? ecvNombre.hashCode() : 0);
-        result = 31 * result + (ecvCodcobis != null ? ecvCodcobis.hashCode() : 0);
-        result = 31 * result + (ecvCodpcie != null ? ecvCodpcie.hashCode() : 0);
-        result = 31 * result + (ecvFechaHoraCrea != null ? ecvFechaHoraCrea.hashCode() : 0);
-        result = 31 * result + (ecvFechaHoraModifica != null ? ecvFechaHoraModifica.hashCode() : 0);
-        result = 31 * result + (ecvUsuarioCrea != null ? ecvUsuarioCrea.hashCode() : 0);
-        result = 31 * result + (ecvUsuarioModifica != null ? ecvUsuarioModifica.hashCode() : 0);
-        return result;
+        int hash = 0;
+        hash += (ecvId != null ? ecvId.hashCode() : 0);
+        return hash;
     }
 
     @Override
     public String toString() {
-        return "ActividadPersonaEntity{" +
-                "ecvId=" + ecvId +
-                ", ecvCodigo='" + ecvCodigo + '\'' +
-                ", ecvNombre='" + ecvNombre + '\'' +
-                ", ecvCodcobis='" + ecvCodcobis + '\'' +
-                ", ecvCodpcie='" + ecvCodpcie + '\'' +
-                ", ecvFechaHoraCrea='" + ecvFechaHoraCrea + '\'' +
-                ", ecvFechaHoraModifica=" + ecvFechaHoraModifica +
-                ", ecvUsuarioCrea=" + ecvUsuarioCrea +
-                ", ecvUsuarioModifica='" + ecvUsuarioModifica + '\'' +
-                '}';
+        return "javaapplication1.CtgEstadoCivil[ ecvId=" + ecvId + " ]";
     }
 
 }

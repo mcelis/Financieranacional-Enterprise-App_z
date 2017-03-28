@@ -7,18 +7,9 @@ import java.sql.Timestamp;
  * Created by Mark on 27/3/2017.
  */
 @Entity
-@Table(name = "CTG_GENERO")
+@Table(name = "CTG_GENERO", schema = "dbo", catalog = "BPM_MDB")
 @NamedQueries({
-        @NamedQuery(name = "CtgGenero.findAll", query = "SELECT c FROM CtgGenero c")
-        , @NamedQuery(name = "CtgGenero.findByGenId", query = "SELECT c FROM CtgGenero c WHERE c.genId = :genId")
-        , @NamedQuery(name = "CtgGenero.findByGenCodigo", query = "SELECT c FROM CtgGenero c WHERE c.genCodigo = :genCodigo")
-        , @NamedQuery(name = "CtgGenero.findByGenNombre", query = "SELECT c FROM CtgGenero c WHERE c.genNombre = :genNombre")
-        , @NamedQuery(name = "CtgGenero.findByGenCodcobis", query = "SELECT c FROM CtgGenero c WHERE c.genCodcobis = :genCodcobis")
-        , @NamedQuery(name = "CtgGenero.findByGenCodpcie", query = "SELECT c FROM CtgGenero c WHERE c.genCodpcie = :genCodpcie")
-        , @NamedQuery(name = "CtgGenero.findByGenFechaHoraCrea", query = "SELECT c FROM CtgGenero c WHERE c.genFechaHoraCrea = :genFechaHoraCrea")
-        , @NamedQuery(name = "CtgGenero.findByGenFechaModifica", query = "SELECT c FROM CtgGenero c WHERE c.genFechaModifica = :genFechaModifica")
-        , @NamedQuery(name = "CtgGenero.findByGenUsuarioCrea", query = "SELECT c FROM CtgGenero c WHERE c.genUsuarioCrea = :genUsuarioCrea")
-        , @NamedQuery(name = "CtgGenero.findByGenUsuarioModifica", query = "SELECT c FROM CtgGenero c WHERE c.genUsuarioModifica = :genUsuarioModifica")})
+        @NamedQuery(name = "Genero.findAll", query = "SELECT c FROM Genero c")})
 
 public class Genero {
 
@@ -38,10 +29,10 @@ public class Genero {
     @Column(name = "GEN_CODPCIE")
     private String genCodpcie;
     @Column(name = "GEN_FECHA_HORA_CREA")
-    @Temporal(TemporalType.TIMESTAMP)
+
     private Timestamp genFechaHoraCrea;
     @Column(name = "GEN_FECHA_MODIFICA")
-    @Temporal(TemporalType.TIMESTAMP)
+
     private Timestamp genFechaModifica;
     @Column(name = "GEN_USUARIO_CREA")
     private String genUsuarioCrea;
@@ -134,16 +125,9 @@ public class Genero {
 
     @Override
     public int hashCode() {
-        int result = genId;
-        result = 31 * result + (genCodigo != null ? genCodigo.hashCode() : 0);
-        result = 31 * result + (genNombre != null ? genNombre.hashCode() : 0);
-        result = 31 * result + (genCodcobis != null ? genCodcobis.hashCode() : 0);
-        result = 31 * result + (genCodpcie != null ? genCodpcie.hashCode() : 0);
-        result = 31 * result + (genFechaHoraCrea != null ? genFechaHoraCrea.hashCode() : 0);
-        result = 31 * result + (genFechaModifica != null ? genFechaModifica.hashCode() : 0);
-        result = 31 * result + (genUsuarioCrea != null ? genUsuarioCrea.hashCode() : 0);
-        result = 31 * result + (genUsuarioModifica != null ? genUsuarioModifica.hashCode() : 0);
-        return result;
+        int hash = 0;
+        hash += (genId != null ? genId.hashCode() : 0);
+        return hash;
     }
 
     @Override
@@ -161,17 +145,7 @@ public class Genero {
 
     @Override
     public String toString() {
-        return "ActividadPersonaEntity{" +
-                "genId=" + genId +
-                ", genCodigo='" + genCodigo + '\'' +
-                ", genNombre='" + genNombre + '\'' +
-                ", genCodcobis='" + genCodcobis + '\'' +
-                ", genCodpcie='" + genCodpcie + '\'' +
-                ", genFechaHoraCrea='" + genFechaHoraCrea + '\'' +
-                ", genFechaModifica=" + genFechaModifica +
-                ", genUsuarioCrea=" + genUsuarioCrea +
-                ", genUsuarioModifica='" + genUsuarioModifica + '\'' +
-                '}';
+        return "javaapplication1.CtgGenero[ genId=" + genId + " ]";
     }
 
 }
