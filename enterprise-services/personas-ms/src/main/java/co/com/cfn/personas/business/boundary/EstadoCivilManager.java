@@ -33,7 +33,7 @@ public class EstadoCivilManager {
     }
 
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<EstadoCivil> listarActividadesPersona() throws SystemException, BusinessException{
+    public List<EstadoCivil> listarEstadoCivil() throws SystemException, BusinessException{
         try{
             return em.createNamedQuery("EstadoCivil.findAll", EstadoCivil.class).getResultList();
         } catch (PersistenceException ex) {

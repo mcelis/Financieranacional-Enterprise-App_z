@@ -54,7 +54,7 @@ public class GeneroResource {
         try{
             LOGGER.info("processing soap request - listartipoIdentificacion ");
             List<GeneroDTO> GeneroList;
-            GeneroList = entityToDtoMapper.map(boundary.listarActividadesPersona());
+            GeneroList = entityToDtoMapper.map(boundary.listarGeneros());
             return Response.ok(new GenericEntity<List<GeneroDTO>>(GeneroList){}).build();
         } catch (SystemException | BusinessException e){
             return  Response.status(Response.Status.BAD_REQUEST).entity(e).build();

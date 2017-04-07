@@ -54,7 +54,7 @@ public class EstadoCivilResource {
 
             List<EstadoCivilDTO> EstadoCivilList;
 
-            EstadoCivilList = entityToDtoMapper.map(boundary.listarActividadesPersona());
+            EstadoCivilList = entityToDtoMapper.map(boundary.listarEstadoCivil());
 
             return Response.ok(new GenericEntity<List<EstadoCivilDTO>>(EstadoCivilList){}).build();
 

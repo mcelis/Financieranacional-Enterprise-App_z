@@ -2,6 +2,7 @@ package co.com.cfn.personas.infrastructure.mapper;
 
 
 import co.com.cfn.foundation.framework.components.builder.Mapper;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 /**
  * ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,6 +37,16 @@ public class MapperFactory {
     public static final String NACIONALIDAD_ENTITY_TO_DTO = "NACIONALIDAD_ENTITY_TO_DTO";
 
     public static final String NIVELESTUDIO_ENTITY_TO_DTO = "NIVELESTUDIO_ENTITY_TO_DTO";
+
+    public static final String PROFESION_ENTITY_TO_DTO = "PROFESION_ENTITY_TO_DTO";
+
+    public static final String GRUPOETNICO_DTO_TO_ENTITY = "GRUPOETNICO_DTO_TO_ENTITY";
+
+    public static final String DESTINOECONOMICO_ENTITY_TO_DTO = "DESTINOECONOMICO_ENTITY_TO_DTO";
+
+    public static final String DESTINOFINANCIERO_ENTITY_TO_DTO = "DESTINOFINANCIERO_ENTITY_TO_DTO";
+
+    public static final String OTROPRODUCTO_ENTITY_TO_DTO = "OTROPRODUCTO_ENTITY_TO_DTO";
 
 
     private static MapperFactory INSTANCE = new MapperFactory();
@@ -112,6 +123,27 @@ public class MapperFactory {
             case NIVELESTUDIO_ENTITY_TO_DTO:
                 mapper = (Mapper<I, O>) new NivelEstudioEntityToDTOMapper();
                 break;
+
+            case PROFESION_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new ProfesionEntityToDTOMapper();
+                break;
+
+            case GRUPOETNICO_DTO_TO_ENTITY:
+                mapper = (Mapper<I,O>) new GrupoEtnicoEntityToDTOMapper();
+                break;
+
+            case DESTINOECONOMICO_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new DestinoEconomicoEntityToDTOMapper();
+                break;
+
+            case DESTINOFINANCIERO_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new DestinoFinancieroEntityToDTOMapper();
+                break;
+
+            case OTROPRODUCTO_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new OtroProductoEntityToDTOMapper();
+                break;
+
 
             default:
                 break;

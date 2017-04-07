@@ -5,10 +5,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by Mark on 28/3/2017.
+ * Created by Mark on 5/4/2017.
  */
 @XmlRootElement(namespace = "http://cfn.com/domain-artifacts/personas/1.0.0")
-public class GrupoEtnicoDTO implements Serializable {
+public class DestinoEconomicoDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -22,10 +22,10 @@ public class GrupoEtnicoDTO implements Serializable {
     private String usuarioCrea;
     private String usuarioModifica;
 
-    public GrupoEtnicoDTO(){
+    public DestinoEconomicoDTO(){
     }
 
-    public GrupoEtnicoDTO(Integer id, String codigo, String nombre, String codCobis, String codPCIE, Date fechaHoraCrea, Date fechaHoraModifica, String usuarioCrea, String usuarioModifica) {
+    public DestinoEconomicoDTO(Integer id, String codigo, String nombre, String codCobis, String codPCIE, Date fechaHoraCrea, Date fechaHoraModifica, String usuarioCrea, String usuarioModifica) {
         this.id = id;
         this.codigo = codigo;
         this.nombre = nombre;
@@ -111,7 +111,7 @@ public class GrupoEtnicoDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "GrupoEtnicoDTO{" +
+        return "DestinoEconomicoDTO{" +
                 "id=" + id +
                 ", codigo='" + codigo + '\'' +
                 ", nombre='" + nombre + '\'' +

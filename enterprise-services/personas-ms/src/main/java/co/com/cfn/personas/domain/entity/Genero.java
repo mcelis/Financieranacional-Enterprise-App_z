@@ -39,7 +39,19 @@ public class Genero {
     @Column(name = "GEN_USUARIO_MODIFICA")
     private String genUsuarioModifica;
 
-    public Genero(Integer id, String codigo, String nombre, String codCobis, String codPCIE, Timestamp fechaHoraCrea, Timestamp fechaHoraModifica, String usuarioCrea, String usuarioModifica) {
+    public Genero(){
+    }
+
+    public Genero(Integer genId, String genCodigo, String genNombre, String genCodcobis, String genCodpcie, Timestamp genFechaHoraCrea, Timestamp genFechaModifica, String genUsuarioCrea, String genUsuarioModifica) {
+        this.genId = genId;
+        this.genCodigo = genCodigo;
+        this.genNombre = genNombre;
+        this.genCodcobis = genCodcobis;
+        this.genCodpcie = genCodpcie;
+        this.genFechaHoraCrea = genFechaHoraCrea;
+        this.genFechaModifica = genFechaModifica;
+        this.genUsuarioCrea = genUsuarioCrea;
+        this.genUsuarioModifica = genUsuarioModifica;
     }
 
     public Genero(Integer genId) {

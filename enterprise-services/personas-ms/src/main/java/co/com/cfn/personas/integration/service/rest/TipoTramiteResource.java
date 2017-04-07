@@ -54,7 +54,7 @@ public class TipoTramiteResource {
 
             List<TipoTramiteDTO> TipoTramiteList;
 
-            TipoTramiteList = entityToDtoMapper.map(boundary.listarActividadesPersona());
+            TipoTramiteList = entityToDtoMapper.map(boundary.listarTiposTramite());
 
             return Response.ok(new GenericEntity<List<TipoTramiteDTO>>(TipoTramiteList){}).build();
         } catch (SystemException | BusinessException e) {

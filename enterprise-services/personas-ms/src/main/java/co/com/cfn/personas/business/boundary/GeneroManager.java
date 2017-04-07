@@ -32,7 +32,7 @@ public class GeneroManager {
     }
 
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<Genero> listarActividadesPersona() throws SystemException, BusinessException{
+    public List<Genero> listarGeneros() throws SystemException, BusinessException{
         try {
             return em.createNamedQuery("Genero.findAll", Genero.class).getResultList();
         } catch (PersistenceException ex){
