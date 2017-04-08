@@ -45,7 +45,14 @@
             <bean class="co.com.cfn.personas.integration.service.rest.TipoIdentificacionResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.NacionalidadResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.NivelEstudioResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.GrupoEtnicoResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoTramiteResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.EstadoCivilResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.ProfesionResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.GeneroResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.DestinoEconomicoResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.DestinoFinancieroResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.OtroProductoResource"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider"/>

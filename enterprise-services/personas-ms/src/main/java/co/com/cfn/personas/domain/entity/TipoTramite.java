@@ -8,7 +8,7 @@ import java.sql.Timestamp;
  */
 
 @Entity
-@Table(name = "CTG_TIPO_TRAMITE")
+@Table(name = "CTG_TIPO_TRAMITE", schema = "dbo", catalog = "BPM_MDB")
 @NamedQueries({
         @NamedQuery(name = "TipoTramite.findAll", query = "SELECT c FROM TipoTramite c")})
 
@@ -36,20 +36,23 @@ public class TipoTramite {
     @Column(name = "TTR_SE_PUEDE_VOLVER_SOL_F")
     private int ttrSePuedeVolverSolF;
 
-    public TipoTramite() {
+    public TipoTramite(){
+    }
+
+    public TipoTramite(Integer ttrId, String ttrNombre, String ttrUsuarioCrea, String ttrUsuarioModifica, Timestamp ttrFechaHoraCrea, Timestamp ttrFechaHoraModifica, int ttrSePuedeVolverSolF) {
+        this.ttrId = ttrId;
+        this.ttrNombre = ttrNombre;
+        this.ttrUsuarioCrea = ttrUsuarioCrea;
+        this.ttrUsuarioModifica = ttrUsuarioModifica;
+        this.ttrFechaHoraCrea = ttrFechaHoraCrea;
+        this.ttrFechaHoraModifica = ttrFechaHoraModifica;
+        this.ttrSePuedeVolverSolF = ttrSePuedeVolverSolF;
     }
 
     public TipoTramite(Integer ttrId) {
         this.ttrId = ttrId;
     }
 
-    public TipoTramite(Integer ttrId, String ttrNombre, String ttrUsuarioCrea, Timestamp ttrFechaHoraCrea, int ttrSePuedeVolverSolF) {
-        this.ttrId = ttrId;
-        this.ttrNombre = ttrNombre;
-        this.ttrUsuarioCrea = ttrUsuarioCrea;
-        this.ttrFechaHoraCrea = ttrFechaHoraCrea;
-        this.ttrSePuedeVolverSolF = ttrSePuedeVolverSolF;
-    }
 
     public Integer getTtrId() {
         return ttrId;
