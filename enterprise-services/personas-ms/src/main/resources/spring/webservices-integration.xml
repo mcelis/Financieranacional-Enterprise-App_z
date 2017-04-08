@@ -53,6 +53,8 @@
             <bean class="co.com.cfn.personas.integration.service.rest.DestinoEconomicoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.DestinoFinancieroResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.OtroProductoResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.MotivoRechazoSolicitudResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.EncuestaConocimientoResource"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider"/>
