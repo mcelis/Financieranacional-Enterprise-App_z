@@ -57,6 +57,7 @@
             <bean class="co.com.cfn.personas.integration.service.rest.EncuestaConocimientoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.MotivoRechazoProductoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.TipoDocumentalResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.MonedaResource"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider"/>

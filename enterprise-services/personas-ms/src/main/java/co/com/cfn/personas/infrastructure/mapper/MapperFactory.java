@@ -54,6 +54,8 @@ public class MapperFactory {
 
     public static final String MOTIVORECHAZOPRODUCTO_ENTITY_TO_DTO = "MOTIVORECHAZOPRODUCTO_ENTITY_TO_DTO";
 
+    public static final String MONEDA_ENTITY_TO_DTO = "MONEDA_ENTITY_TO_DTO";
+
 
     private static MapperFactory INSTANCE = new MapperFactory();
 
@@ -156,6 +158,10 @@ public class MapperFactory {
 
             case MOTIVORECHAZOPRODUCTO_ENTITY_TO_DTO:
                 mapper = (Mapper<I,O>) new MotivoRechazoProductoEntityToDTOMapper();
+                break;
+
+            case MONEDA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new MonedaEntityToDTOMapper();
                 break;
 
 
