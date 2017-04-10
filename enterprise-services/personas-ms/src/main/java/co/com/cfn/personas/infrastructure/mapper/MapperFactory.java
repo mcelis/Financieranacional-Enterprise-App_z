@@ -52,6 +52,8 @@ public class MapperFactory {
 
     public static final String ENCUESTACONOCIMIENTO_ENTITY_TO_DTO = "ENCUESTACONOCIMIENTO_ENTITY_TO_DTO";
 
+    public static final String MOTIVORECHAZOPRODUCTO_ENTITY_TO_DTO = "MOTIVORECHAZOPRODUCTO_ENTITY_TO_DTO";
+
 
     private static MapperFactory INSTANCE = new MapperFactory();
 
@@ -78,10 +80,6 @@ public class MapperFactory {
 
             case PERSONA_ENTITY_TO_DTO:
                 mapper = (Mapper<I, O>) new ActividadPersonaEntityToDTOMapper();
-                break;
-
-            case TIPODOCUMENTAL_DTO_TO_ENTITY:
-                mapper = (Mapper<I, O>) new TipoDocumetalDTOToEntityMapper();
                 break;
 
             case TIPODOCUMENTAL_ENTITY_TO_DTO:
@@ -154,6 +152,10 @@ public class MapperFactory {
 
             case ENCUESTACONOCIMIENTO_ENTITY_TO_DTO:
                 mapper = (Mapper<I,O>) new EncuestaConocimientoEntityToDTOMapper();
+                break;
+
+            case MOTIVORECHAZOPRODUCTO_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new MotivoRechazoProductoEntityToDTOMapper();
                 break;
 
 

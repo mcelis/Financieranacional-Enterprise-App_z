@@ -3,15 +3,12 @@ package co.com.cfn.foundation.canonical.personas;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.Date;
 
 /**
  * Created by Mark on 8/4/2017.
  */
 @XmlRootElement(namespace = "http://cfn.com/domain-artifacts/personas/1.0.0")
-public class MotivoRechazoSolicitudDTO implements Serializable{
-
-    private static final long serialVersionUID = 1L;
+public class MotivoRechazoProductoDTO implements Serializable{
 
     private Integer id;
     private String nombre;
@@ -19,19 +16,17 @@ public class MotivoRechazoSolicitudDTO implements Serializable{
     private Timestamp fechaHoraModifica;
     private String usuarioCrea;
     private String usuarioModifica;
-    private String abrevMacroProceso;
 
-    public MotivoRechazoSolicitudDTO(){
+    public MotivoRechazoProductoDTO(){
     }
 
-    public MotivoRechazoSolicitudDTO(Integer id, String nombre, Timestamp fechaHoraCrea, Timestamp fechaHoraModifica, String usuarioCrea, String usuarioModifica, String abrevMacroProceso) {
+    public MotivoRechazoProductoDTO(Integer id, String nombre, Timestamp fechaHoraCrea, Timestamp fechaHoraModifica, String usuarioCrea, String usuarioModifica) {
         this.id = id;
         this.nombre = nombre;
         this.fechaHoraCrea = fechaHoraCrea;
         this.fechaHoraModifica = fechaHoraModifica;
         this.usuarioCrea = usuarioCrea;
         this.usuarioModifica = usuarioModifica;
-        this.abrevMacroProceso = abrevMacroProceso;
     }
 
     public Integer getId() {
@@ -50,7 +45,7 @@ public class MotivoRechazoSolicitudDTO implements Serializable{
         this.nombre = nombre;
     }
 
-    public Date getFechaHoraCrea() {
+    public Timestamp getFechaHoraCrea() {
         return fechaHoraCrea;
     }
 
@@ -58,7 +53,7 @@ public class MotivoRechazoSolicitudDTO implements Serializable{
         this.fechaHoraCrea = fechaHoraCrea;
     }
 
-    public Date getFechaHoraModifica() {
+    public Timestamp getFechaHoraModifica() {
         return fechaHoraModifica;
     }
 
@@ -82,26 +77,15 @@ public class MotivoRechazoSolicitudDTO implements Serializable{
         this.usuarioModifica = usuarioModifica;
     }
 
-    public String getAbrevMacroProceso() {
-        return abrevMacroProceso;
-    }
-
-    public void setAbrevMacroProceso(String abrevMacroProceso) {
-        this.abrevMacroProceso = abrevMacroProceso;
-    }
-
     @Override
     public String toString() {
-        return "MotivoRechazoSolicitudDTO{" +
+        return "MotivoRechazoProductoDTO{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", fechaHoraCreacion=" + fechaHoraCrea +
                 ", fechaHoraModifica=" + fechaHoraModifica +
                 ", usuarioCrea='" + usuarioCrea + '\'' +
                 ", usuarioModifica='" + usuarioModifica + '\'' +
-                ", usuarioModifica='" + abrevMacroProceso + '\'' +
                 '}';
     }
-
-
 }

@@ -1,6 +1,7 @@
 package co.com.cfn.personas.domain.entity;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.*;
 
 @Entity
@@ -15,7 +16,6 @@ public class TipoDocumental {
     @Basic(optional = false)
     @Column(name = "TDO_ID", nullable = false)
     private Integer tdoId;
-
     @Basic(optional = false)
     @Column(name = "TDO_NOMBRE", nullable = false, length = 200)
     private String tdoNombre;
@@ -26,38 +26,29 @@ public class TipoDocumental {
     private String tdoUsuarioModifica;
     @Basic(optional = false)
     @Column(name = "TDO_FECHA_HORA_CREA", nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    private  Date tdoFechaHoraCrea;
+    private Timestamp tdoFechaHoraCrea;
     @Column(name = "TDO_FECHA_HORA_MODIFICA")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date tdoFechaHoraModifica;
+    private Timestamp tdoFechaHoraModifica;
     @Column(name = "TDO_DESCRIPCION", length = 250)
     private String tdoDescripcion;
     @Column(name = "TDO_MESES_VIGENCIA")
     private Integer tdoMesesVigencia;
     @Basic(optional = false)
     @Column(name = "TDO_ES_ANEXO_F", nullable = false)
-    private int tdoEsAnexoF;
+    private Integer tdoEsAnexoF;
 
     public TipoDocumental() {
     }
 
-    public TipoDocumental(Integer tdoId) {
-        this.tdoId = tdoId;
-    }
-
-    public TipoDocumental(Integer tdoId, String tdoNombre, String tdoDescripcion)
-    {
-        this.tdoId = tdoId;
-        this.tdoNombre = tdoNombre;
-        this.tdoDescripcion = tdoDescripcion;
-    }
-
-    public TipoDocumental(Integer tdoId, String tdoNombre, String tdoUsuarioCrea, Date tdoFechaHoraCrea, int tdoEsAnexoF) {
+    public TipoDocumental(Integer tdoId, String tdoNombre, String tdoUsuarioCrea, String tdoUsuarioModifica, Timestamp tdoFechaHoraCrea, Timestamp tdoFechaHoraModifica, String tdoDescripcion, Integer tdoMesesVigencia, Integer tdoEsAnexoF) {
         this.tdoId = tdoId;
         this.tdoNombre = tdoNombre;
         this.tdoUsuarioCrea = tdoUsuarioCrea;
+        this.tdoUsuarioModifica = tdoUsuarioModifica;
         this.tdoFechaHoraCrea = tdoFechaHoraCrea;
+        this.tdoFechaHoraModifica = tdoFechaHoraModifica;
+        this.tdoDescripcion = tdoDescripcion;
+        this.tdoMesesVigencia = tdoMesesVigencia;
         this.tdoEsAnexoF = tdoEsAnexoF;
     }
 
@@ -97,7 +88,7 @@ public class TipoDocumental {
         return tdoFechaHoraCrea;
     }
 
-    public void setTdoFechaHoraCrea(Date tdoFechaHoraCrea) {
+    public void setTdoFechaHoraCrea(Timestamp tdoFechaHoraCrea) {
         this.tdoFechaHoraCrea = tdoFechaHoraCrea;
     }
 
@@ -105,7 +96,7 @@ public class TipoDocumental {
         return tdoFechaHoraModifica;
     }
 
-    public void setTdoFechaHoraModifica(Date tdoFechaHoraModifica) {
+    public void setTdoFechaHoraModifica(Timestamp tdoFechaHoraModifica) {
         this.tdoFechaHoraModifica = tdoFechaHoraModifica;
     }
 
@@ -129,7 +120,7 @@ public class TipoDocumental {
         return tdoEsAnexoF;
     }
 
-    public void setTdoEsAnexoF(int tdoEsAnexoF) {
+    public void setTdoEsAnexoF(Integer tdoEsAnexoF) {
         this.tdoEsAnexoF = tdoEsAnexoF;
     }
 
