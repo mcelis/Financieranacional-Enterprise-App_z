@@ -25,7 +25,7 @@ public class NivelEstudioManager {
 
     private static Logger LOGGER = LogManager.getLogger(NivelEstudioManager.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public NivelEstudioManager() {

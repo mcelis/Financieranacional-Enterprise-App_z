@@ -25,7 +25,7 @@ public class ProfesionManager {
 
     private static Logger LOGGER = LogManager.getLogger(ProfesionManager.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public ProfesionManager() {

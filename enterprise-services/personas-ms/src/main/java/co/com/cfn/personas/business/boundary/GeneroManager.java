@@ -25,7 +25,7 @@ public class GeneroManager {
 
     private static Logger LOGGER = LogManager.getLogger(GeneroManager.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public GeneroManager(){

@@ -25,7 +25,7 @@ public class TipoIdentificacionManager {
 
     private static Logger LOGGER = LogManager.getLogger(PersonasMananger.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public TipoIdentificacionManager() {

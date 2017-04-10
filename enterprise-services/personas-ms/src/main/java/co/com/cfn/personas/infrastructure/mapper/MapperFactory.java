@@ -48,6 +48,12 @@ public class MapperFactory {
 
     public static final String OTROPRODUCTO_ENTITY_TO_DTO = "OTROPRODUCTO_ENTITY_TO_DTO";
 
+    public static final String OFICINA_ENTITY_TO_DTO = "OFICINA_ENTITY_TO_DTO";
+
+    public static final String PROVINCIA_ENTITY_TO_DTO = "PROVINCIA_ENTITY_TO_DTO";
+
+    public static final String PERIODICIDAD_ENTITY_TO_DTO = "PERIODICIDAD_ENTITY_TO_DTO";
+
 
     private static MapperFactory INSTANCE = new MapperFactory();
 
@@ -144,6 +150,17 @@ public class MapperFactory {
                 mapper = (Mapper<I,O>) new OtroProductoEntityToDTOMapper();
                 break;
 
+            case OFICINA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new OficinaEntityToDTOMapper();
+                break;
+
+            case PROVINCIA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new ProvinciaEntityToDTOMapper();
+                break;
+
+            case PERIODICIDAD_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new PeriodicidadEntityToDTOMapper();
+                break;
 
             default:
                 break;

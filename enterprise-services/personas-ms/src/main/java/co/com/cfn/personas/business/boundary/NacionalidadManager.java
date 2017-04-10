@@ -26,7 +26,7 @@ public class NacionalidadManager {
 
     private static Logger LOGGER = LogManager.getLogger(NacionalidadManager.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public NacionalidadManager() {

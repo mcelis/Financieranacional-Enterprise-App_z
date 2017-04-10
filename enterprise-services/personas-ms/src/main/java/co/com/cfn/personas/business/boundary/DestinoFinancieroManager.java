@@ -25,7 +25,7 @@ public class DestinoFinancieroManager {
 
     public static Logger LOGGER = LogManager.getLogger(DestinoFinancieroManager.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public DestinoFinancieroManager(){
