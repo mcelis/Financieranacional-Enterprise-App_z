@@ -26,7 +26,7 @@ public class OtroProductoManager {
 
     private static Logger LOGGER = LogManager.getLogger(OtroProductoManager.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public OtroProductoManager(){

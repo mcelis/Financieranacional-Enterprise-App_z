@@ -41,6 +41,26 @@
 
     </beans>
 
+    <beans profile="dev_PCIE">
+
+        <bean id="dataSourcePCIE" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+            <property name="driverClassName" value="com.sybase.jdbc4.jdbc.SybDriver"/>
+            <property name="url" value="jdbc:sybase:Tds:10.20.30.20:3000?ServiceName=PCIE_SEG"/>
+            <property name="username" value="desarrollo"/>
+            <property name="password" value="cfndes"/>
+            <property name="initialSize" value="0"/>
+            <property name="maxTotal" value="8"/>
+            <property name="maxIdle" value="8"/>
+            <property name="minIdle" value="0"/>
+        </bean>
+
+        <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+            <property name="showSql" value="true"/>
+            <property name="database" value="SYBASE"/>
+        </bean>
+
+    </beans>
+
 
     <beans profile="dev-sql">
 

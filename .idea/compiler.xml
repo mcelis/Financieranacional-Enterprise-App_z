@@ -6,10 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base-framework" />
-        <module name="canonical-api-contract" />
-        <module name="personas-ms" />
-        <module name="service-framework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

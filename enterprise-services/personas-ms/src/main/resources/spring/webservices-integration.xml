@@ -53,11 +53,17 @@
             <bean class="co.com.cfn.personas.integration.service.rest.DestinoEconomicoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.DestinoFinancieroResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.OtroProductoResource"/>
+
             <bean class="co.com.cfn.personas.integration.service.rest.MotivoRechazoSolicitudResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.EncuestaConocimientoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.MotivoRechazoProductoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.TipoDocumentalResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.MonedaResource"/>
+
+            <bean class="co.com.cfn.personas.integration.service.rest.OficinaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.ProvinciaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.PeriodicidadResource"/>
+
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider"/>
