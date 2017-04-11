@@ -5,10 +5,12 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * Created by zmiranda on 21/02/2017.
+ * Created by Mark on 8/4/2017.
  */
 @XmlRootElement(namespace = "http://cfn.com/domain-artifacts/personas/1.0.0")
-public class TipoDocumentalDTO implements Serializable {
+public class EncuestaConocimientoDTO implements Serializable{
+
+    private static final long serialVersionUID = 1L;
 
     private Integer id;
     private String nombre;
@@ -16,23 +18,17 @@ public class TipoDocumentalDTO implements Serializable {
     private String usuarioModifica;
     private Timestamp fechaHoraCrea;
     private Timestamp fechaHoraModifica;
-    private String descripcion;
-    private Integer mesesVigencia;
-    private Integer esAnexoF;
 
-    public TipoDocumentalDTO(){
+    public EncuestaConocimientoDTO(){
     }
 
-    public TipoDocumentalDTO(Integer id, String nombre, String usuarioCrea, String usuarioModifica, Timestamp fechaHoraCrea, Timestamp fechaHoraModifica, String descripcion, Integer mesesVigencia, Integer esAnexoF) {
+    public EncuestaConocimientoDTO(Integer id, String nombre, String usuarioCrea, String usuarioModifica, Timestamp fechaHoraCrea, Timestamp fechaHoraModifica) {
         this.id = id;
         this.nombre = nombre;
         this.usuarioCrea = usuarioCrea;
         this.usuarioModifica = usuarioModifica;
         this.fechaHoraCrea = fechaHoraCrea;
         this.fechaHoraModifica = fechaHoraModifica;
-        this.descripcion = descripcion;
-        this.mesesVigencia = mesesVigencia;
-        esAnexoF = esAnexoF;
     }
 
     public Integer getId() {
@@ -83,42 +79,15 @@ public class TipoDocumentalDTO implements Serializable {
         this.fechaHoraModifica = fechaHoraModifica;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public Integer getMesesVigencia() {
-        return mesesVigencia;
-    }
-
-    public void setMesesVigencia(Integer mesesVigencia) {
-        this.mesesVigencia = mesesVigencia;
-    }
-
-    public Integer getEsAnexoF() {
-        return esAnexoF;
-    }
-
-    public void setEsAnexoF(Integer esAnexoF) {
-        esAnexoF = esAnexoF;
-    }
-
     @Override
     public String toString() {
-        return "TipoDocumentalDTO{" +
+        return "CtgGeneroDTO{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", usuarioCrea='" + usuarioCrea + '\'' +
                 ", usuarioModifica='" + usuarioModifica + '\'' +
                 ", fechaHoraCreacion=" + fechaHoraCrea +
                 ", fechaHoraModifica=" + fechaHoraModifica +
-                ", descripcion='" + descripcion +'\'' +
-                ", mesesVigencia='" + mesesVigencia + '\'' +
-                ", esAnexoF='" + esAnexoF +
                 '}';
     }
 }
