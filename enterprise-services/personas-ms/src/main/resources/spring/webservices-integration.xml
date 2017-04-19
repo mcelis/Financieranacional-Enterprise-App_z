@@ -63,6 +63,10 @@
             <bean class="co.com.cfn.personas.integration.service.rest.OficinaResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.ProvinciaResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.PeriodicidadResource"/>
+            <!--<bean class="co.com.cfn.personas.integration.service.rest.actividadEconomicaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.tipoTarjetaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.tipoCompaniaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.tipoCuentaResource"/>-->
 
         </jaxrs:serviceBeans>
         <jaxrs:providers>

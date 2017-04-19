@@ -41,7 +41,7 @@
 
     </beans>
 
-    <beans profile="dev_PCIE">
+    <!--<beans profile="dev_PCIE">
 
         <bean id="dataSourcePCIE" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
             <property name="driverClassName" value="com.sybase.jdbc4.jdbc.SybDriver"/>
@@ -59,7 +59,7 @@
             <property name="database" value="SYBASE"/>
         </bean>
 
-    </beans>
+    </beans>-->
 
 
     <beans profile="dev-sql">

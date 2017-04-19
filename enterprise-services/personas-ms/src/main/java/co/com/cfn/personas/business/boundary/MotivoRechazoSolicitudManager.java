@@ -26,7 +26,7 @@ public class MotivoRechazoSolicitudManager {
 
     private static Logger LOGGER = LogManager.getLogger(MotivoRechazoSolicitudManager.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public MotivoRechazoSolicitudManager(){

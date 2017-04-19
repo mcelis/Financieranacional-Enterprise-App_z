@@ -7,12 +7,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.Response;
 
-import co.com.cfn.foundation.canonical.personas.GeneroDTO;
+import co.com.cfn.foundation.canonical.personas.TipoCompaniaDTO;
 import co.com.cfn.foundation.framework.components.builder.Mapper;
 import co.com.cfn.foundation.framework.exceptions.BusinessException;
 import co.com.cfn.foundation.framework.exceptions.SystemException;
-import co.com.cfn.personas.business.boundary.GeneroManager;
-import co.com.cfn.personas.domain.entity.Genero;
+import co.com.cfn.personas.business.boundary.TipoCompaniaManager;
+import co.com.cfn.personas.domain.entity.TipoCompania;
 import co.com.cfn.personas.infrastructure.mapper.MapperFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,27 +21,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
- * Created by Mark on 27/3/2017.
+ * Created by Mark on 18/4/2017.
  */
-@Path("/generoResource")
+@Path("/tipoCompaniaResource")
 @Consumes({"application/xml", "application/json"})
 @Produces({"application/xml", "application/json"})
-public class GeneroResource {
+public class TipoCompaniaResource {
 
-    private static Logger LOGGER = LogManager.getLogger(GeneroResource.class.getName());
+    private static Logger LOGGER = LogManager.getLogger(TipoCompaniaResource.class.getName());
 
     //[fields] -----------------------------
 
     @Autowired
-    private GeneroManager boundary;
-    private final Mapper<GeneroDTO,Genero> dtoToEntitymapper;
-    private final Mapper<List<Genero>, List<GeneroDTO>> entityToDtoMapper;
+    private TipoCompaniaManager boundary;
+    private final Mapper<List<TipoCompania>, List<TipoCompaniaDTO>> entityToDtoMapper;
 
     //[constructor] -----------------------------
 
-    public GeneroResource(){
-        dtoToEntitymapper = MapperFactory.getInstance().getMapper(MapperFactory.GENERO_DTO_TO_ENTITY);
-        entityToDtoMapper = MapperFactory.getInstance().getMapper(MapperFactory.GENERO_ENTITY_TO_DTO);
+    public TipoCompaniaResource(){
+        entityToDtoMapper = MapperFactory.getInstance().getMapper(MapperFactory.TIPOCOMPANIA_ENTITY_TO_DTO);
 
     }
 
@@ -53,9 +51,9 @@ public class GeneroResource {
 
         try{
             LOGGER.info("processing soap request - listarGenero ");
-            List<GeneroDTO> GeneroList;
-            GeneroList = entityToDtoMapper.map(boundary.listarGeneros());
-            return Response.ok(new GenericEntity<List<GeneroDTO>>(GeneroList){}).build();
+            List<TipoCompaniaDTO> TipoCompaniaList;
+            TipoCompaniaList = entityToDtoMapper.map(boundary.listarTipoCompania());
+            return Response.ok(new GenericEntity<List<TipoCompaniaDTO>>(TipoCompaniaList){}).build();
         } catch (SystemException | BusinessException e){
             return  Response.status(Response.Status.BAD_REQUEST).entity(e).build();
         }

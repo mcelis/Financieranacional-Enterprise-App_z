@@ -64,7 +64,7 @@
         </property>
     </bean>
 
-    <bean id="entityManagerFactoryPCIE" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <!--<bean id="entityManagerFactoryPCIE" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceUnitName" value="persistenciaCatalogoPCIE" />
         <property name="dataSource" ref="dataSourcePCIE"/>
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
@@ -87,7 +87,7 @@
         <property name="loadTimeWeaver">
             <bean class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"/>
         </property>
-    </bean>
+    </bean> -->
 
     <!-- ~~~~~~~~~~~~~~~~~ Spring trasanction support -->
 
@@ -95,9 +95,9 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
-    <bean id="transactionManagerPCIE" class="org.springframework.orm.jpa.JpaTransactionManager">
+    <!-- <bean id="transactionManagerPCIE" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactoryPCIE"/>
-    </bean>
+    </bean> -->
 
     <bean id="persistenceExceptionTranslationPostProcessor"
           class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>

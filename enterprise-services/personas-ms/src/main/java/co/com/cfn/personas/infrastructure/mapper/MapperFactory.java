@@ -62,6 +62,14 @@ public class MapperFactory {
 
     public static final String PERIODICIDAD_ENTITY_TO_DTO = "PERIODICIDAD_ENTITY_TO_DTO";
 
+    public static final String TIPOTARJETA_ENTITY_TO_DTO = "TIPOTARJETA_ENTITY_TO_DTO";
+
+    public static final String ACTIVIDADECONOMICA_ENTITY_TO_DTO = "ACTIVIDADECONOMICA_ENTITY_TO_DTO";
+
+    public static final String TIPOCOMPANIA_ENTITY_TO_DTO = "TIPOCOMPANIA_ENTITY_TO_DTO";
+
+    public static final String TIPOCUENTA_ENTITY_TO_DTO = "TIPOCUENTA_ENTITY_TO_DTO";
+
 
 
     private static MapperFactory INSTANCE = new MapperFactory();
@@ -183,6 +191,23 @@ public class MapperFactory {
             case PERIODICIDAD_ENTITY_TO_DTO:
                 mapper = (Mapper<I,O>) new PeriodicidadEntityToDTOMapper();
                 break;
+
+            case TIPOTARJETA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoDocumentalEntityToDTOMapper();
+                break;
+
+            case ACTIVIDADECONOMICA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new ActividadEconomicaEntityToDTOMapper();
+                break;
+
+            case TIPOCOMPANIA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoCompaniaEntityToDTOMapper();
+                break;
+
+            case TIPOCUENTA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoCuentaEntityToDTOMapper();
+                break;
+
 
             default:
                 break;

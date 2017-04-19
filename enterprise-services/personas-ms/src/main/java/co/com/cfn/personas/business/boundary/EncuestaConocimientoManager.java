@@ -25,7 +25,7 @@ public class EncuestaConocimientoManager {
 
     private static Logger LOGGER = LogManager.getLogger(EncuestaConocimientoManager.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public EncuestaConocimientoManager(){

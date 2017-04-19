@@ -26,7 +26,7 @@ public class TipoDocumentalManager {
 
     private static Logger LOGGER = LogManager.getLogger(TipoDocumental.class.getName());
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "persistenciaCatalogo")
     private EntityManager em;
 
     public TipoDocumentalManager(){
