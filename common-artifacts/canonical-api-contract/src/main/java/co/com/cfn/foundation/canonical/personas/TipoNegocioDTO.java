@@ -5,45 +5,37 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
- * Created by Mark on 18/4/2017.
+ * Created by Mark on 21/4/2017.
  */
 @XmlRootElement(namespace = "http://cfn.com/domain-artifacts/personas/1.0.0")
-public class TipoGarantiaDTO implements Serializable {
+public class TipoNegocioDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String id;
+    private Integer id;
     private String nombre;
-    private Integer nivel;
-    private String idPadre;
-    private String codCobis;
-    private String codPCIE;
     private Timestamp fechaHoraCrea;
     private Timestamp fechaHoraModifica;
     private String usuarioCrea;
     private String usuarioModifica;
 
-    public TipoGarantiaDTO(){
+    public TipoNegocioDTO(){
     }
 
-    public TipoGarantiaDTO(String id, String nombre, Integer nivel, String idPadre, String codCobis, String codPCIE, Timestamp fechaHoraCrea, Timestamp fechaHoraModifica, String usuarioCrea, String usuarioModifica) {
+    public TipoNegocioDTO(Integer id, String nombre, Timestamp fechaHoraCrea, Timestamp fechaHoraModifica, String usuarioCrea, String usuarioModifica) {
         this.id = id;
         this.nombre = nombre;
-        this.nivel = nivel;
-        this.idPadre = idPadre;
-        this.codCobis = codCobis;
-        this.codPCIE = codPCIE;
         this.fechaHoraCrea = fechaHoraCrea;
         this.fechaHoraModifica = fechaHoraModifica;
         this.usuarioCrea = usuarioCrea;
         this.usuarioModifica = usuarioModifica;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -53,38 +45,6 @@ public class TipoGarantiaDTO implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public Integer getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(Integer nivel) {
-        this.nivel = nivel;
-    }
-
-    public String getIdPadre() {
-        return idPadre;
-    }
-
-    public void setIdPadre(String idPadre) {
-        this.idPadre = idPadre;
-    }
-
-    public String getCodCobis() {
-        return codCobis;
-    }
-
-    public void setCodCobis(String codCobis) {
-        this.codCobis = codCobis;
-    }
-
-    public String getCodPCIE() {
-        return codPCIE;
-    }
-
-    public void setCodPCIE(String codPCIE) {
-        this.codPCIE = codPCIE;
     }
 
     public Timestamp getFechaHoraCrea() {
@@ -121,13 +81,9 @@ public class TipoGarantiaDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "CtgGeneroDTO{" +
+        return "TipoNegocioDTO{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
-                ", codigo='" + nivel + '\'' +
-                ", codigo='" + idPadre + '\'' +
-                ", codCobis='" + codCobis + '\'' +
-                ", codPcie='" + codPCIE + '\'' +
                 ", fechaHoraCreacion=" + fechaHoraCrea +
                 ", fechaHoraModifica=" + fechaHoraModifica +
                 ", usuarioCrea='" + usuarioCrea + '\'' +

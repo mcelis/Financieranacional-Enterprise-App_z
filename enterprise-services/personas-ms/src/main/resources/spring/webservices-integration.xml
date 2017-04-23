@@ -53,20 +53,22 @@
             <bean class="co.com.cfn.personas.integration.service.rest.DestinoEconomicoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.DestinoFinancieroResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.OtroProductoResource"/>
-
             <bean class="co.com.cfn.personas.integration.service.rest.MotivoRechazoSolicitudResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.EncuestaConocimientoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.MotivoRechazoProductoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.TipoDocumentalResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.MonedaResource"/>
-
             <bean class="co.com.cfn.personas.integration.service.rest.OficinaResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.ProvinciaResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.PeriodicidadResource"/>
-            <!--<bean class="co.com.cfn.personas.integration.service.rest.actividadEconomicaResource"/>
-            <bean class="co.com.cfn.personas.integration.service.rest.tipoTarjetaResource"/>
-            <bean class="co.com.cfn.personas.integration.service.rest.tipoCompaniaResource"/>
-            <bean class="co.com.cfn.personas.integration.service.rest.tipoCuentaResource"/>-->
+            <bean class="co.com.cfn.personas.integration.service.rest.ActividadEconomicaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoTarjetaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoCompaniaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoCuentaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoGarantiaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoProyectoResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoNegocioResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoPersonaResource"/>
 
         </jaxrs:serviceBeans>
         <jaxrs:providers>

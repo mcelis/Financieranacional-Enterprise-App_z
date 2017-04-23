@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="org.hibernate:hibernate-validator-annotation-processor:5.2.2.Final" type="repository">
+    <properties maven-id="org.hibernate:hibernate-validator-annotation-processor:5.2.2.Final" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/enterprise-services/personas-ms/target/personas-ms/WEB-INF/lib/hibernate-validator-annotation-processor-5.2.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enterprise-services/personas-ms/target/personas-ms/WEB-INF/lib/hibernate-validator-annotation-processor-5.2.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enterprise-services/personas-ms/target/personas-ms/WEB-INF/lib/hibernate-validator-annotation-processor-5.2.2.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
