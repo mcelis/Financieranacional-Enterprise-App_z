@@ -69,6 +69,12 @@
             <bean class="co.com.cfn.personas.integration.service.rest.TipoProyectoResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.TipoNegocioResource"/>
             <bean class="co.com.cfn.personas.integration.service.rest.TipoPersonaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoDireccionResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoEstadoFinancieroResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoReferenciaComercialResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoTerceroResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoUnidadMedidaResource"/>
+            <bean class="co.com.cfn.personas.integration.service.rest.TipoViviendaResource"/>
 
         </jaxrs:serviceBeans>
         <jaxrs:providers>

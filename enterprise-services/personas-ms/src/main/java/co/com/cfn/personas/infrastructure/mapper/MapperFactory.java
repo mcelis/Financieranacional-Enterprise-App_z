@@ -78,6 +78,18 @@ public class MapperFactory {
 
     public static final String TIPOPERSONA_ENTITY_TO_DTO = "TIPOPERSONA_ENTITY_TO_DTO";
 
+    public static final String TIPODIRECCION_ENTITY_TO_DTO = "TIPODIRECCION_ENTITY_TO_DTO";
+
+    public static final String TIPOESTADOFINANCIERO_ENTITY_TO_DTO = "TIPOESTADOFINANCIERO_ENTITY_TO_DTO";
+
+    public static final String TIPOREFERENCIACOMERCIAL_ENTITY_TO_DTO = "TIPOREFERENCIACOMERCIAL_ENTITY_TO_DTO";
+
+    public static final String TIPOTERCERO_ENTITY_TO_DTO = "TIPOTERCERO_ENTITY_TO_DTO";
+
+    public static final String TIPOUNIDADMEDIDA_ENTITY_TO_DTO = "TIPOUNIDADMEDIDA_ENTITY_TO_DTO";
+
+    public static final String TIPOVIVIENDA_ENTITY_TO_DTO = "TIPOVIVIENDA_ENTITY_TO_DTO";
+
 
 
     private static MapperFactory INSTANCE = new MapperFactory();
@@ -231,6 +243,31 @@ public class MapperFactory {
             case TIPOPERSONA_ENTITY_TO_DTO:
                 mapper = (Mapper<I,O>) new TipoPersonaEntityToDTOMapper();
                 break;
+
+            case TIPODIRECCION_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoDireccionEntityToDTOManager();
+                break;
+
+            case TIPOESTADOFINANCIERO_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoEstadoFinancieroEntityToDTOMapper();
+                break;
+
+            case TIPOREFERENCIACOMERCIAL_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoReferenciaComercialEntityToDTOMapper();
+                break;
+
+            case TIPOTERCERO_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoTerceroEntityToDTOMapper();
+                break;
+
+            case TIPOUNIDADMEDIDA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoUnidadMedidaEntityToDTOMapper();
+                break;
+
+            case TIPOVIVIENDA_ENTITY_TO_DTO:
+                mapper = (Mapper<I,O>) new TipoViviendaEntityToDTOMapper();
+                break;
+
 
 
             default:
